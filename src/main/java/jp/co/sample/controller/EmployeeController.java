@@ -29,7 +29,7 @@ public class EmployeeController {
 	 */
 	@RequestMapping("/showList")
 	public String showList(Model model) {
-		model.addAttribute("employee", employeeService.showList());
+		model.addAttribute("employeeList", employeeService.showList());
 		return "employee/list";
 	}
 }
