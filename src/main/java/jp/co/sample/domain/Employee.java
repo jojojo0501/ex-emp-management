@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * 従業員情報を表すドメイン
+ * 
  * @author kanekojota
  *
  */
@@ -32,7 +33,7 @@ public class Employee {
 	private String characteristics;
 	/** 扶養人数 */
 	private Integer dependentsCount;
-	
+
 	public Employee() {
 	}
 
@@ -157,6 +158,5 @@ public class Employee {
 				+ ", telephone=" + telephone + ", salary=" + salary + ", characteristics=" + characteristics
 				+ ", dependentsCount=" + dependentsCount + "]";
 	}
-	
-	
+
 }

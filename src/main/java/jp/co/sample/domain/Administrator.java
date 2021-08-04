@@ -2,6 +2,7 @@ package jp.co.sample.domain;
 
 /**
  * 管理者情報を表すドメイン
+ * 
  * @author kanekojota
  *
  */
@@ -14,7 +15,7 @@ public class Administrator {
 	private String mailAddress;
 	/** パスワード */
 	private String password;
-	
+
 	public Administrator() {
 	}
 
@@ -63,5 +64,5 @@ public class Administrator {
 		return "Administrator [id=" + id + ", name=" + name + ", mailAddress=" + mailAddress + ", password=" + password
 				+ "]";
 	}
-	
+
 }
