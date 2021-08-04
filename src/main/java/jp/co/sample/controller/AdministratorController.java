@@ -42,6 +42,6 @@ public class AdministratorController {
 		administrator.setMailAddress(form.getMailAddress());
 		administrator.setPassword(form.getPassword());
 		administratorService.insert(administrator);
-		return("/");
+		return("redirect:/");
 	}
 }
