@@ -14,6 +14,11 @@ import org.springframework.stereotype.Repository;
 import jp.co.sample.domain.Administrator;
 import jp.co.sample.domain.Employee;
 
+/**
+ * Employeeテーブルを操作するリポジトリ
+ * @author kanekojota
+ *
+ */
 @Repository
 public class EmployeeRepository {
 	
@@ -49,6 +54,10 @@ public class EmployeeRepository {
 		return employee;
 	}
 	
+	/**
+	 * 渡した従業員情報を更新する
+	 * @param employee
+	 */
 	public void update(Employee employee) {
 		SqlParameterSource param = new BeanPropertySqlParameterSource(employee);
 		StringBuilder sql = new StringBuilder();
