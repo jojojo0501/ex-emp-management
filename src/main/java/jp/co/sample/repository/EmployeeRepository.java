@@ -35,7 +35,7 @@ public class EmployeeRepository {
 	public List<Employee> findAll(){
 		StringBuilder sql = new StringBuilder();
 		sql.append("SELECT id,name,image,gender,hire_date,mail_address,zip_code,address,telephone,salary,characteristics,dependents_count");
-		sql.append("FROM employees ORDER BY hire_date DESC;");
+		sql.append(" FROM employees ORDER BY hire_date DESC;");
 		List<Employee>employeeList = template.query(sql.toString(), EMPLOYEE_ROW_MAPPER);
 		return employeeList;
 	}
