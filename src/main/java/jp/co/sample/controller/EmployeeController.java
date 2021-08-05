@@ -67,7 +67,7 @@ public class EmployeeController {
 		int intDependentCount = Integer.parseInt(form.getDependentsCount());
 		employee.setDependentsCount(intDependentCount);
 		employeeService.update(employee);
-		return "redirect:employee/showList";
+		return "redirect:/employee/showList";
 	}
 
 }
