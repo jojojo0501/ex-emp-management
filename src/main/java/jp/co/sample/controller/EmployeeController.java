@@ -39,21 +39,24 @@ public class EmployeeController {
 		model.addAttribute("employeeList", employeeService.showList());
 		return "employee/list";
 	}
+
 	/**
 	 * 受け取ったidの従業員情報をリクエストスコープに格納する
+	 * 
 	 * @param id
 	 * @param model
 	 * @return 従業員詳細ページへフォワード
 	 */
 	@RequestMapping("/showDetail")
-	public String showDetail(String id,Model model) {
+	public String showDetail(String id, Model model) {
 		int intId = Integer.parseInt(id);
 		model.addAttribute("employee", employeeService.showDetail(intId));
 		return "employee/detail";
 	}
-	
+
 	/**
 	 * リクエストパラメーターで送られてきた従業員の扶養人数を更新する。
+	 * 
 	 * @param form
 	 * @return 従業員一覧ページへリダイレクト
 	 */
@@ -66,7 +69,5 @@ public class EmployeeController {
 		employeeService.update(employee);
 		return "redirect:employee/showList";
 	}
-	
-	
 
 }
