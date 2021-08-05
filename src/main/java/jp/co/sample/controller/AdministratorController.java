@@ -81,5 +81,15 @@ public class AdministratorController {
 			return "forward:/employee/showList";
 		}
 	}
+	
+	/**
+	 * セッション情報を削除し、ログアウトする。
+	 * @return ログイン画面にリダイレクトする
+	 */
+	@RequestMapping("/logout")
+	public String logout() {
+		session.invalidate();
+		return "redirect:/";
+	}
 
 }
